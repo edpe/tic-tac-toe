@@ -3,10 +3,9 @@ require 'game'
 describe 'Game Rules:' do
 
   # There are two players in the game (X and O)
-  # Players take turns until the game is over
+  # Players take turns 
   it ' consists of two players who take turns' do
-    game = Game.new
-    expect(game.current_player).to eq 'X'
+    game = Game.new('X')
     game.play(1)
     expect(game.current_player).to eq 'O'
   end
