@@ -1,4 +1,5 @@
 #Tic-Tac-Toe
+
 The rules of tic-tac-toe are as follows:
 
 There are two players in the game (X and O)
