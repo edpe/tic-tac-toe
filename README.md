@@ -1,4 +1,4 @@
-#Tic-Tac-Toe
+# Tic-Tac-Toe
 
 The rules of tic-tac-toe are as follows:
 
