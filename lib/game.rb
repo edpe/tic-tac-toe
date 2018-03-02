@@ -1,9 +1,12 @@
+require './lib/grid'
+
 class Game
 
   attr_reader :current_player
 
-  def initialize(current_player = 'X')
+  def initialize(current_player = 'X', grid = Grid.new)
     @current_player = current_player
+    @grid = grid
   end
 
   def switch_player
@@ -15,8 +18,12 @@ class Game
   end
 
   def play(move)
-    @move = move
-    switch_player
+    unless @grid.fields[move].is_a? Integer
+      raise "That field is already taken"
+    else
+      @grid.add(@current_player, move)
+      switch_player
+    end
   end
 
 end
